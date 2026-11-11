@@ -11,13 +11,13 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:Pretendard,'Malgun Gothic',sans-serif;color:var(--ink);background:#fff;line-height:1.55;font-size:17px;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
-  p{word-break:keep-all}
+  p,h2{word-break:keep-all}
   .wrap{max-width:560px;margin:0 auto;padding:0 20px}
   h1,h2{font-weight:800;letter-spacing:-.045em;color:var(--navy)}
 
   /* 1. 고통 */
-  .hero{padding:32px 0 30px}
-  .hero h1{font-size:40px;line-height:1.25}
+  .hero{padding:30px 0 26px}
+  .hero h1{font-size:clamp(25px,8.2vw,44px);line-height:1.25;white-space:nowrap}
   .hero .t{margin-top:20px;font-size:19px;line-height:1.65;font-weight:500;letter-spacing:-.03em}
   .hero .q{margin-top:16px;font-size:19px;line-height:1.6;font-weight:800;color:var(--navy);letter-spacing:-.03em}
 
@@ -34,10 +34,17 @@
   .case p{font-size:14.5px;color:var(--sub);line-height:1.5;margin-top:2px}
   .badge{display:inline-block;background:var(--navy);color:#fff;font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:1px}
   .people{margin-top:16px;display:grid;gap:10px}
-  .who{background:#fff;border-left:4px solid var(--navy);border-radius:4px 10px 10px 4px;padding:11px 14px}
-  .who b{font-size:17px;font-weight:800}
-  .who b span{color:var(--navy)}
-  .who p{font-size:14.5px;color:var(--sub);margin-top:1px;line-height:1.5}
+  .who{display:flex;border-radius:14px;overflow:hidden;background:#fff}
+  .who .yr{flex:none;width:92px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--navy);color:#fff;padding:10px 4px}
+  .who .yr b{font-size:38px;font-weight:800;letter-spacing:-.05em;line-height:1}
+  .who .yr b small{font-size:20px;font-weight:700}
+  .who .yr span{font-size:13px;font-weight:700;color:var(--pale);margin-top:5px}
+  .who.mk .yr{background:#dfe5ee;color:var(--navy)}
+  .who.mk .yr span{color:var(--navy)}
+  .who .tx{padding:11px 14px 12px}
+  .who .nm{font-size:22px;font-weight:800;letter-spacing:-.04em;line-height:1.2}
+  .who .ti{font-size:16px;font-weight:700;color:var(--navy);margin-top:1px}
+  .who .tx p{font-size:14.5px;color:var(--sub);margin-top:5px;line-height:1.5}
 
   .ch{margin-top:16px}
   .ch .lb{font-size:13px;font-weight:700;color:var(--mute);letter-spacing:.06em}
@@ -49,7 +56,7 @@
   .more{display:inline-block;margin-top:14px;font-size:15px;font-weight:700;color:var(--navy);border-bottom:2px solid var(--pale);padding-bottom:1px}
 
   /* 3. 신청 */
-  .cta{background:var(--navy);color:#fff;padding:32px 0 20px}
+  .cta{background:var(--navy);color:#fff;padding:28px 0 18px}
   .cta h2{color:#fff;font-size:32px;line-height:1.3}
   .cta .lead{font-size:18px;color:var(--pale);margin-top:14px;line-height:1.6}
   .btn{display:block;background:#fff;color:var(--navy);text-align:center;font-size:19px;font-weight:800;border-radius:12px;padding:17px 16px;margin-top:22px}
@@ -57,12 +64,14 @@
   .scope li{position:relative;padding-left:20px;font-size:14.5px;line-height:1.45;color:#fff;word-break:keep-all}
   .scope li::before{content:"✓";position:absolute;left:0;font-weight:800}
   .cta .free{font-size:14.5px;color:var(--pale);margin-top:14px;line-height:1.6}
+  .links{margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,.18);font-size:13.5px;color:var(--pale);line-height:1.9}
+  .links b{font-weight:700;color:#fff}
+  .links a{display:inline-block;margin-right:12px;border-bottom:1px solid rgba(201,209,222,.5)}
   .cta .no{font-size:12.5px;color:var(--mute);margin-top:16px}
   .cta .no a{border-bottom:1px solid var(--mute)}
 
-  @media (min-width:700px){.wrap{max-width:620px}.hero h1{font-size:48px}}
+  @media (min-width:700px){.wrap{max-width:620px}.hero h1{font-size:46px}}
   @media (max-width:370px){
-    .hero h1{font-size:34px}
     .case img{width:76px;height:76px}
     .case .big{font-size:36px}
     .cta h2{font-size:28px}
@@ -72,7 +81,7 @@
 <body>
 
 <header class="hero"><div class="wrap">
-  <h1>에휴...<br>이번 달도 빈자리가<br>그대로네요.</h1>
+  <h1>에휴... 요즘 사람이 없네요.</h1>
   <p class="t">정원은 비어 있는데,<br>인건비와 운영비는 매달 나갑니다.</p>
   <p class="q">문의가 부족한 걸까요?<br>문의는 오는데 입소가 안 되는 걸까요?</p>
 </div></header>
@@ -98,8 +107,8 @@
   </div>
 
   <div class="people">
-    <div class="who"><b>최광진 <span>| 7년간 요양원 운영</span></b><p>요양원 2곳·방문요양 / 개원·인수·입소 상담·시설 운영</p></div>
-    <div class="who"><b>김옥현 <span>| 4년 이상 요양원 마케팅</span></b><p>블로그·플레이스·검색광고 / 홈페이지·콘텐츠·문의 확보</p></div>
+    <div class="who"><div class="yr"><b>7<small>년</small></b><span>운영</span></div><div class="tx"><div class="nm">최광진</div><div class="ti">7년간 요양원 운영</div><p>요양원 2곳·방문요양 운영<br>개원·시설 인수·입소 모집·보호자 상담·시설 운영</p></div></div>
+    <div class="who mk"><div class="yr"><b>4<small>년+</small></b><span>마케팅</span></div><div class="tx"><div class="nm">김옥현</div><div class="ti">4년 이상 요양원 마케팅</div><p>블로그·플레이스·검색광고<br>홈페이지 구축·콘텐츠 제작·보호자 문의 확보</p></div></div>
   </div>
 
   <div class="ch">
@@ -118,6 +127,9 @@
   <a class="btn" href="https://open.kakao.com/o/sjQvlOVg">무료 입소 현황 점검 신청</a>
   <ul class="scope"><li>현재 정원과 입소 현황 확인</li><li>신규 입소 문의 상황 확인</li><li>가장 어려운 문제 파악</li><li>개선할 부분 간단히 안내</li></ul>
   <p class="free">상세 진단 및 개선 작업은 별도 유료 서비스입니다.</p>
+  <div class="links"><b>실제 작업물 더 보기</b><br>
+    <a href="https://www.youtube.com/@%EC%9D%98%EC%A0%95%EB%B6%80VIP%EC%9A%94%EC%96%91%EC%9B%90">유튜브 | 의정부 VIP요양원</a><a href="https://blog.naver.com/vip2606">블로그 | 의정부 VIP요양원</a><a href="https://www.vipcare.co.kr/">홈페이지 | 의정부 VIP요양원</a><a href="portfolio.html">상세 포트폴리오</a>
+  </div>
   <p class="no">입소 인원이나 만실을 보장하지 않습니다.</p>
 </div></section>
 
