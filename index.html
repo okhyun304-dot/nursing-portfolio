@@ -18,8 +18,9 @@
   /* 1. 고통 */
   .hero{padding:30px 0 26px}
   .hero h1{font-size:clamp(25px,8.2vw,44px);line-height:1.25;white-space:nowrap}
-  .hero .t{margin-top:20px;font-size:19px;line-height:1.65;font-weight:500;letter-spacing:-.03em}
-  .hero .q{margin-top:16px;font-size:19px;line-height:1.6;font-weight:800;color:var(--navy);letter-spacing:-.03em}
+  .hero .story{margin-top:18px;font-size:18.5px;line-height:1.7;font-weight:500;letter-spacing:-.03em;color:var(--ink);word-break:keep-all}
+  .hero .story p+p{margin-top:12px}
+  .hero .story .end{font-size:21px;font-weight:800;color:var(--navy);margin-top:16px;letter-spacing:-.04em}
 
   /* 2. 성과 + 두 사람 */
   .proof{background:var(--bg);padding:28px 0 30px}
@@ -82,8 +83,12 @@
 
 <header class="hero"><div class="wrap">
   <h1>에휴... 요즘 사람이 없네요.</h1>
-  <p class="t">정원은 비어 있는데,<br>인건비와 운영비는 매달 나갑니다.</p>
-  <p class="q">문의가 부족한 걸까요?<br>문의는 오는데 입소가 안 되는 걸까요?</p>
+  <div class="story">
+    <p>오늘도 어르신이 계셔야 할<br>침대가 비어 있습니다.</p>
+    <p>직원 월급날은 어김없이 돌아오고,<br>관리비와 운영비도 나갑니다.</p>
+    <p>보호자 전화 한 통을 기다리지만 소식이 없고,<br>어렵게 상담을 해도 입소까지 이어지지 않습니다.</p>
+    <p class="end">그 빈자리는 다음 달에도 그대로입니다.</p>
+  </div>
 </div></header>
 
 <section class="proof"><div class="wrap">
