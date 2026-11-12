@@ -53,7 +53,8 @@
   .who .tx p{font-size:16.5px;color:var(--sub);margin-top:10px;line-height:1.6}
 
   /* 4. 작업물 */
-  .book{margin-top:36px;background:#fff;border-radius:16px;padding:22px 20px 24px;display:grid;gap:18px;align-items:center}
+  .bookwrap{background:var(--bg);padding:40px 0 48px}
+  .book{margin-top:0;background:#fff;border-radius:16px;padding:22px 20px 24px;display:grid;gap:18px;align-items:center}
   .book img{display:block;width:150px;max-width:46%;border-radius:8px;box-shadow:0 4px 14px rgba(20,23,28,.18)}
   .book .k{font-size:15px;font-weight:700;color:var(--mute);letter-spacing:.06em}
   .book h3{font-size:clamp(23px,6vw,30px);font-weight:800;color:var(--navy);letter-spacing:-.045em;margin-top:4px}
@@ -105,7 +106,8 @@
     .who .nm{font-size:38px}
     .who .ti{font-size:21px}
     .who .tx p{font-size:17.5px}
-    .book{grid-template-columns:190px 1fr;gap:28px;padding:28px 30px;margin-top:52px}
+    .bookwrap{padding:56px 0 64px}
+    .book{grid-template-columns:190px 1fr;gap:28px;padding:28px 30px;margin-top:0}
     .book img{width:190px;max-width:none}
     .book .rb{max-width:340px}
     .works{margin-top:52px}
@@ -162,17 +164,6 @@
     <div class="who mk"><div class="yr"><b>4<small>년</small></b><span>마케팅</span></div><div class="tx"><div class="nm">김옥현</div><div class="ti">4년 이상 요양원 마케팅</div><p>블로그·플레이스·검색광고<br>홈페이지 구축·콘텐츠 제작·보호자 문의 확보</p></div></div>
   </div>
 
-  <div class="book">
-    <img src="images/book_cover.jpg" alt="요양원 공실의 이유 표지" loading="lazy">
-    <div>
-      <div class="k">요양원 원장님을 위한 무료 전자책</div>
-      <h3>『요양원 공실의 이유』</h3>
-      <p>입소자 0명에서 만실까지. 현직 요양원 원장이 직접 겪은 공실·마케팅·상담·입소의 기록.</p>
-      <p class="cnt">총 45편 중 15편 무료 공개</p>
-      <a class="rb" href="book/">전자책 무료로 읽어보기</a>
-    </div>
-  </div>
-
   <div class="works">
     <div class="lb">실제 운영한 마케팅 채널</div>
     <div class="g">
@@ -196,6 +187,19 @@
   <ul class="scope"><li>현재 정원과 입소 현황 확인</li><li>신규 입소 문의 상황 확인</li><li>가장 어려운 문제 파악</li><li>개선할 부분 간단히 안내</li></ul>
   <p class="free">상세 진단 및 개선 작업은 별도 유료 서비스입니다.</p>
   <p class="no">입소 인원이나 만실을 보장하지 않습니다.</p>
+</div></section>
+
+<section class="bookwrap"><div class="wrap">
+  <div class="book">
+    <img src="images/book_cover.jpg" alt="요양원 공실의 이유 표지" loading="lazy">
+    <div>
+      <div class="k">요양원 원장님을 위한 무료 전자책</div>
+      <h3>『요양원 공실의 이유』</h3>
+      <p>입소자 0명에서 만실까지. 현직 요양원 원장이 직접 겪은 공실·마케팅·상담·입소의 기록.</p>
+      <p class="cnt">총 45편 중 15편 무료 공개</p>
+      <a class="rb" href="book/">전자책 무료로 읽어보기</a>
+    </div>
+  </div>
 </div></section>
 
 </body>
