@@ -55,13 +55,13 @@
 
   /* 4. 작업물 */
   .bookwrap{background:var(--bg);padding:40px 0 48px}
-  .book{margin-top:0;background:#fff;border-radius:16px;padding:22px 20px 24px;display:grid;gap:18px;align-items:center}
+  .book{margin-top:0;background:#fff;border-radius:16px;padding:22px 20px 24px;display:grid;gap:18px;align-items:center;justify-items:center;text-align:center}
   .book img{display:block;width:150px;max-width:46%;border-radius:8px;box-shadow:0 4px 14px rgba(20,23,28,.18)}
   .book .k{font-size:15px;font-weight:700;color:var(--mute);letter-spacing:.06em}
   .book h3{font-size:clamp(23px,6vw,30px);font-weight:800;color:var(--navy);letter-spacing:-.045em;margin-top:4px}
   .book p{font-size:16.5px;color:var(--sub);line-height:1.6;margin-top:8px;text-wrap:balance}
   .book .cnt{font-weight:700;color:var(--navy)}
-  .book .rb{display:block;background:var(--navy);color:#fff;text-align:center;font-size:19px;font-weight:800;border-radius:14px;padding:16px;margin-top:16px}
+  .book .rb{display:block;width:100%;background:var(--navy);color:#fff;text-align:center;font-size:19px;font-weight:800;border-radius:14px;padding:16px;margin-top:16px}
   .works{margin-top:36px}
   .works .lb{font-size:15px;font-weight:700;color:var(--mute);letter-spacing:.06em}
   .works .g{display:grid;gap:14px;margin-top:10px}
@@ -108,9 +108,9 @@
     .who .ti{font-size:21px}
     .who .tx p{font-size:17.5px}
     .bookwrap{padding:56px 0 64px}
-    .book{grid-template-columns:190px 1fr;gap:28px;padding:28px 30px;margin-top:0}
+    .book{grid-template-columns:1fr;gap:22px;padding:32px 30px;margin:0 auto;max-width:640px}
     .book img{width:190px;max-width:none}
-    .book .rb{max-width:340px}
+    .book .rb{max-width:340px;margin-left:auto;margin-right:auto}
     .works{margin-top:52px}
     .works .g{grid-template-columns:1fr 1fr;gap:24px}
     .cta{padding:72px 0 40px}
