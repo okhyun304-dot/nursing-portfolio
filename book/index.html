@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" data-theme="dark">
+<html lang="ko" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
@@ -588,7 +588,7 @@ blockquote.diary p:last-child{margin-bottom:0}
 <script>
 const root=document.documentElement;
 const saved=localStorage.getItem('theme');
-root.setAttribute('data-theme', saved ? saved : 'dark');
+root.setAttribute('data-theme', saved ? saved : 'light');
 function updThemeIcon(){document.getElementById('themeBtn').textContent=root.getAttribute('data-theme')==='dark'?'☀':'☾';}
 updThemeIcon();
 document.getElementById('themeBtn').onclick=()=>{
